@@ -1,0 +1,144 @@
+/* General Reset and Body Styling */
+body, h1, h2, p, ul, li, a {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
+    line-height: 1.6;
+}
+
+/* Container for Main Content */
+.container {
+    max-width: 1140px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* Page Heading */
+h1.my-4 {
+    font-size: 2.5rem;
+    color: #333;
+    margin-bottom: 30px;
+    text-align: center;
+    position: relative;
+}
+
+h1.my-4 small {
+    font-size: 1rem;
+    color: #888;
+    display: block;
+    margin-top: 10px;
+}
+
+/* Card Component */
+.card {
+    background: #fff;
+    margin-bottom: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+}
+
+.card-img-top {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    border-bottom: 1px solid #ddd;
+}
+
+.card-body {
+    padding: 20px;
+}
+
+.card-title {
+    font-size: 1.75rem;
+    color: #007bff;
+    margin-bottom: 15px;
+}
+
+.card-text {
+    font-size: 1rem;
+    color: #555;
+    margin-bottom: 20px;
+    line-height: 1.8;
+}
+
+.btn-primary {
+    background-color: #007bff;
+    border: none;
+    color: #fff;
+    padding: 10px 20px;
+    font-size: 1rem;
+    border-radius: 3px;
+    text-transform: uppercase;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+    display: inline-block;
+}
+
+.btn-primary:hover {
+    background-color: #0056b3;
+}
+
+/* Card Footer */
+.card-footer {
+    background-color: #f8f9fa;
+    padding: 10px 20px;
+    font-size: 0.875rem;
+    color: #777;
+    text-align: right;
+    border-top: 1px solid #ddd;
+}
+
+.card-footer a {
+    color: #007bff;
+    text-decoration: none;
+}
+
+.card-footer a:hover {
+    color: #0056b3;
+    text-decoration: underline;
+}
+
+/* Pagination */
+.pagination {
+    margin-top: 30px;
+    display: flex;
+    justify-content: center;
+    list-style: none;
+}
+
+.page-item {
+    margin: 0 5px;
+}
+
+.page-link {
+    color: #007bff;
+    padding: 10px 15px;
+    border: 1px solid #ddd;
+    border-radius: 3px;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+}
+
+.page-link:hover {
+    background-color: #e9ecef;
+}
+
+.page-item.disabled .page-link {
+    color: #aaa;
+    background-color: #f8f9fa;
+    border-color: #ddd;
+    pointer-events: none;
+}
+
+.page-item.active .page-link {
+    background-color: #007bff;
+    color: #fff;
+    border-color: #007bff;
+}
