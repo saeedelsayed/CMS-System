@@ -21,9 +21,14 @@ Route::middleware('auth')->group(function()
     Route::patch('/admin/posts/{post}/update', [App\Http\Controllers\PostController::class, 'update'])->name('post.update');
     Route::get('/admin/posts/{post}/edit', [App\Http\Controllers\PostController::class, 'edit'])->name('post.edit');
 
-    Route::get('{user}/profile', [\App\Http\Controllers\UserController::class, 'index'])->name('user.profile');
+    Route::get('{user}/profile', [\App\Http\Controllers\UserController::class, 'show'])->name('user.profile');
     Route::put('{user}/update', [\App\Http\Controllers\UserController::class, 'update'])->name('user.profile.update');
 
+    Route::delete('admin/users/{user}/destroy', [\App\Http\Controllers\UserController::class, 'destroy'])->name('user.destroy');
 });
 
 
+Route::middleware('role:Admin')->group(function (){
+
+    Route::get('admin/users', [\App\Http\Controllers\UserController::class, 'index'])->name('users.index');
+});
