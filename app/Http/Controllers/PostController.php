@@ -22,7 +22,7 @@ class PostController extends Controller
     public function store()
     {
         $inputs = request()->validate([
-            'title'=> 'required|min:25|max:255',
+            'title'=> 'required|min:1|max:255',
             'post_image'=>'file',
             'body'=>'required'
         ]);
